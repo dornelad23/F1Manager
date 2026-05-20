@@ -1,0 +1,13 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:src="@drawable/logo_f1m"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"/>
+
+</FrameLayout>

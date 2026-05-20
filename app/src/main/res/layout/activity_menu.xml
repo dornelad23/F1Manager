@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_menu_clean"
+        android:scaleType="centerCrop" />
+
+    <com.example.f1manager.DiagonalPanelView
+        android:layout_width="470dp"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="18dp">
+
+        <ImageView
+            android:id="@+id/logoMenu"
+            android:layout_width="250dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logo_f1_manager"
+            android:scaleType="fitCenter"
+            android:layout_marginBottom="18dp" />
+
+        <include layout="@layout/item_menu_jogar" />
+        <include layout="@layout/item_menu_garagem" />
+        <include layout="@layout/item_menu_opcoes" />
+        <include layout="@layout/item_menu_sair" />
+
+    </LinearLayout>
+
+    <TextView
+        android:text="VERSÃO 0.1.0    ALPHA"
+        android:textColor="#AAAAAA"
+        android:textSize="9sp"
+        android:letterSpacing="0.12"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
