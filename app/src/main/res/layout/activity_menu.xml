@@ -14,23 +14,70 @@
         android:layout_height="match_parent" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginBottom="18dp">
+        android:paddingStart="28dp"
+        android:paddingTop="24dp">
 
-        <ImageView
-            android:id="@+id/logoMenu"
-            android:layout_width="250dp"
-            android:layout_height="120dp"
-            android:src="@drawable/logo_f1_manager"
-            android:scaleType="fitCenter"
-            android:layout_marginBottom="18dp" />
+        <!-- LOGO EM TEXTO -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="18dp">
 
-        <include layout="@layout/item_menu_jogar" />
-        <include layout="@layout/item_menu_garagem" />
-        <include layout="@layout/item_menu_opcoes" />
-        <include layout="@layout/item_menu_sair" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="F1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="46sp"
+                android:fontFamily="sans-serif-black" />
+
+            <View
+                android:layout_width="145dp"
+                android:layout_height="3dp"
+                android:background="#D40000"
+                android:layout_marginTop="-4dp"
+                android:layout_marginBottom="3dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MANAGER"
+                android:textColor="#E00000"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:letterSpacing="0.20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEU LEGADO. SUA ESTRATÉGIA."
+                android:textColor="#D8D8D8"
+                android:textSize="8sp"
+                android:letterSpacing="0.14"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <include
+            android:id="@+id/btnJogar"
+            layout="@layout/item_menu_jogar" />
+
+        <include
+            android:id="@+id/btnGaragem"
+            layout="@layout/item_menu_garagem" />
+
+        <include
+            android:id="@+id/btnOpcoes"
+            layout="@layout/item_menu_opcoes" />
+
+        <include
+            android:id="@+id/btnSair"
+            layout="@layout/item_menu_sair" />
 
     </LinearLayout>
 
