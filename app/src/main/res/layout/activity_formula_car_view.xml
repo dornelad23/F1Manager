@@ -1,0 +1,5 @@
+<com.example.f1manager.FormulaCarView android:id="@+id/formulaCarView"
+    android:layout_width="680dp"
+    android:layout_height="320dp"
+    android:layout_gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

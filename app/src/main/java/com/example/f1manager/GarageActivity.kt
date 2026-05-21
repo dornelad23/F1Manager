@@ -13,8 +13,6 @@ class GarageActivity : BaseActivity() {
 
         val txtNomeEquipe = findViewById<TextView>(R.id.txtNomeEquipe)
         val txtDinheiro = findViewById<TextView>(R.id.txtDinheiro)
-        val txtCarroNivel = findViewById<TextView>(R.id.txtCarroNivel)
-        val txtAtributos = findViewById<TextView>(R.id.txtAtributos)
 
         val uid = FirebaseAuth.getInstance().currentUser?.uid
         val db = FirebaseFirestore.getInstance()
@@ -30,13 +28,16 @@ class GarageActivity : BaseActivity() {
                     val velocidade = doc.getLong("velocidade") ?: 10
                     val controle = doc.getLong("controle") ?: 10
                     val pneu = doc.getLong("pneu") ?: 10
+                    val carroView = findViewById<FormulaCarView>(R.id.formulaCarView)
+
+                    carroView.atualizarCarro(
+                        motor.toInt(),
+                        velocidade.toInt(),
+                        pneu.toInt()
+                    )
 
                     txtNomeEquipe.text = nome
                     txtDinheiro.text = "R$ $dinheiro"
-                    txtCarroNivel.text = "CARRO NÍVEL $nivel"
-
-                    txtAtributos.text =
-                        "Motor: $motor\nVelocidade: $velocidade\nControle: $controle\nPneu: $pneu"
                 }
         }
     }
