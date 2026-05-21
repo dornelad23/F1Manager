@@ -165,34 +165,6 @@
                 android:fontFamily="sans-serif-black" />
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/btnFacebook"
-            android:layout_width="match_parent"
-            android:layout_height="37dp"
-            android:layout_marginTop="7dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:background="@drawable/bg_btn_facebook">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="f"
-                android:textColor="#FFFFFF"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginEnd="12dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CONTINUAR COM FACEBOOK"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="10sp"
-                android:fontFamily="sans-serif-black" />
-        </LinearLayout>
-
         <TextView
             android:id="@+id/textCriarConta"
             android:layout_width="wrap_content"

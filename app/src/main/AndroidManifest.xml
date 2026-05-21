@@ -13,6 +13,13 @@
         android:theme="@style/Theme.F1Manager"
         tools:targetApi="31">
         <activity
+            android:name=".GarageActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".CreateTeamActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
             android:name=".MenuActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
@@ -26,7 +33,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".EmailLoginActivity"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -40,13 +47,6 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="landscape" />
-        <meta-data
-            android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id" />
-
-        <meta-data
-            android:name="com.facebook.sdk.ClientToken"
-            android:value="@string/facebook_client_token" />
     </application>
 
 </manifest>

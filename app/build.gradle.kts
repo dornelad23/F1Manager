@@ -42,9 +42,10 @@ dependencies {
     implementation("com.google.android.material:material:1.12.0")
     implementation("com.google.firebase:firebase-auth-ktx:23.2.0")
     implementation("com.google.android.gms:play-services-auth:21.2.0")
-    implementation("com.facebook.android:facebook-login:latest.release")
-    implementation(libs.androidx.activity.ktx)
+    implementation("androidx.activity:activity-ktx:1.10.1")
     implementation(libs.androidx.constraintlayout)
+    implementation("com.google.firebase:firebase-firestore-ktx:25.1.1")
+    implementation("androidx.activity:activity:1.10.1")
 }
 
 apply(plugin = "com.google.gms.google-services")
