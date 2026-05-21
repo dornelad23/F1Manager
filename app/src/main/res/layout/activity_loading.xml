@@ -20,7 +20,7 @@
             android:layout_marginBottom="30dp" />
 
         <ProgressBar
-            android:id="@+id/progressLoading"
+            android:id="@+id/progressBar"
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="22dp"

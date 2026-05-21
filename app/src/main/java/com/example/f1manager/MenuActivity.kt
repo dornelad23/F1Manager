@@ -7,7 +7,7 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MenuActivity : AppCompatActivity() {
+class MenuActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +25,8 @@ class MenuActivity : AppCompatActivity() {
         val btnSair = findViewById<View>(R.id.btnSair)
 
         btnJogar.setOnClickListener {
-
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-
+            startActivity(Intent(this, LoginActivity::class.java))
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 
         btnGaragem.setOnClickListener {

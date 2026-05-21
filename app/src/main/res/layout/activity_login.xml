@@ -12,109 +12,197 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#66000000" />
+        android:background="#88000000" />
 
+    <!-- LOGO -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="24dp">
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="F1"
             android:textColor="#FFFFFF"
+            android:textSize="44sp"
             android:textStyle="bold"
-            android:textSize="46sp"
             android:fontFamily="sans-serif-black" />
 
         <View
-            android:layout_width="145dp"
-            android:layout_height="3dp"
-            android:background="#D40000"
-            android:layout_marginTop="-4dp"
-            android:layout_marginBottom="3dp" />
+            android:layout_width="150dp"
+            android:layout_height="4dp"
+            android:background="#F00016" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="MANAGER"
-            android:textColor="#E00000"
+            android:textColor="#FF1E2D"
+            android:textSize="22sp"
             android:textStyle="bold"
-            android:textSize="18sp"
-            android:fontFamily="monospace"
-            android:letterSpacing="0.20" />
+            android:letterSpacing="0.16"
+            android:fontFamily="sans-serif-black" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="SEU LEGADO. SUA ESTRATÉGIA."
-            android:textColor="#D8D8D8"
-            android:textSize="8sp"
-            android:letterSpacing="0.14"
-            android:layout_marginTop="4dp" />
+            android:textColor="#DDDDDD"
+            android:textSize="10sp"
+            android:letterSpacing="0.18" />
     </LinearLayout>
 
+    <!-- BOX LOGIN -->
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="285dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="bottom|center_horizontal"
-        android:layout_marginBottom="42dp">
+        android:padding="16dp"
+        android:background="@drawable/bg_login_box">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Selecione a forma de login"
-            android:textColor="#DDDDDD"
-            android:textSize="13sp"
-            android:layout_marginBottom="12dp" />
+            android:text="Entrar"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:layout_gravity="center" />
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Faça login para continuar sua jornada."
+            android:textColor="#DDDDDD"
+            android:textSize="10sp"
+            android:layout_marginTop="2dp"
+            android:layout_gravity="center" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="12dp"
+            android:hint="Email"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:singleLine="true"
+            android:imeOptions="flagNoExtractUi|actionNext"
+            android:inputType="textEmailAddress"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@drawable/bg_input" />
+
+        <EditText
+            android:id="@+id/editSenha"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="7dp"
+            android:hint="Senha"
+            android:textSize="12sp"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:singleLine="true"
+            android:imeOptions="flagNoExtractUi|actionDone"
+            android:inputType="textPassword"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:background="@drawable/bg_input" />
+
+        <TextView
+            android:id="@+id/btnEntrar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="ENTRAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-black"
+            android:background="@drawable/bg_btn_red" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OU"
+            android:textColor="#BBBBBB"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="5dp" />
+
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:gravity="center"
             android:orientation="horizontal"
-            android:gravity="center">
+            android:background="@drawable/bg_btn_google">
 
             <TextView
-                android:id="@+id/btnGoogle"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="G"
-                android:textSize="30sp"
+                android:textColor="#4285F4"
+                android:textSize="17sp"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:background="@drawable/login_square" />
+                android:layout_marginEnd="12dp" />
 
             <TextView
-                android:id="@+id/btnFacebook"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:gravity="center"
-                android:text="f"
-                android:textSize="36sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTINUAR COM GOOGLE"
+                android:textColor="#222222"
                 android:textStyle="bold"
-                android:textColor="#FFFFFF"
-                android:layout_marginStart="26dp"
-                android:background="@drawable/login_square" />
-
-            <TextView
-                android:id="@+id/btnEmail"
-                android:layout_width="180dp"
-                android:layout_height="42dp"
-                android:gravity="center"
-                android:text="ENTRAR COM EMAIL"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold"
-                android:textSize="12sp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/login_square" />
-
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-black" />
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_btn_facebook">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="f"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTINUAR COM FACEBOOK"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="10sp"
+                android:fontFamily="sans-serif-black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textCriarConta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não tem conta? Criar conta"
+            android:textColor="#FF3333"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center" />
 
     </LinearLayout>
 

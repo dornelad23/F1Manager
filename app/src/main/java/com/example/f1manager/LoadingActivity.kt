@@ -6,31 +6,51 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.ProgressBar
 import android.widget.TextView
-import androidx.appcompat.app.AppCompatActivity
 
-class LoadingActivity : AppCompatActivity() {
+class LoadingActivity : BaseActivity() {
+
+    private lateinit var progressBar: ProgressBar
+    private lateinit var txtPorcentagem: TextView
 
     private var progresso = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_loading)
 
-        val progressBar = findViewById<ProgressBar>(R.id.progressLoading)
-        val txtPorcentagem = findViewById<TextView>(R.id.txtPorcentagem)
+        progressBar = findViewById(R.id.progressBar)
+        txtPorcentagem = findViewById(R.id.txtPorcentagem)
 
         val handler = Handler(Looper.getMainLooper())
 
         val runnable = object : Runnable {
+
             override fun run() {
+
                 progresso += 2
+
                 progressBar.progress = progresso
                 txtPorcentagem.text = "$progresso%"
 
                 if (progresso < 100) {
+
                     handler.postDelayed(this, 40)
+
                 } else {
-                    startActivity(Intent(this@LoadingActivity, MenuActivity::class.java))
+
+                    val intent = Intent(
+                        this@LoadingActivity,
+                        MenuActivity::class.java
+                    )
+
+                    startActivity(intent)
+
+                    overridePendingTransition(
+                        R.anim.fade_in,
+                        R.anim.fade_out
+                    )
+
                     finish()
                 }
             }

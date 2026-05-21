@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "409409966649",
+    "project_id": "f1-manager-aa89f",
+    "storage_bucket": "f1-manager-aa89f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409409966649:android:4c18ed8e4a0844561f33e8",
+        "android_client_info": {
+          "package_name": "com.example.f1manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "409409966649-1dua9hko7b023mmgissq4ko9uak7hjlq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCN9VGGAXexrRxv2HUl0_RDkful_YAmGw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "409409966649-1dua9hko7b023mmgissq4ko9uak7hjlq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

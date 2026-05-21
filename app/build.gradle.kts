@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -39,6 +40,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("com.google.android.material:material:1.12.0")
+    implementation("com.google.firebase:firebase-auth-ktx:23.2.0")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation("com.facebook.android:facebook-login:latest.release")
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.constraintlayout)
 }
+
+apply(plugin = "com.google.gms.google-services")

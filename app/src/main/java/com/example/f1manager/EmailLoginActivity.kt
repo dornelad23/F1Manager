@@ -3,7 +3,7 @@ package com.example.f1manager
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 
-class EmailLoginActivity : AppCompatActivity() {
+class EmailLoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
