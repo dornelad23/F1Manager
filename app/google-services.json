@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "409409966649",
+    "firebase_url": "https://f1-manager-aa89f-default-rtdb.firebaseio.com",
     "project_id": "f1-manager-aa89f",
     "storage_bucket": "f1-manager-aa89f.firebasestorage.app"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "409409966649-hvsdv1eamjn9tbcqprb5tasgqamp4dda.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.f1manager",
+            "certificate_hash": "9191ea9bceefa718765a02d39abb605f1f5a6eff"
+          }
+        },
         {
           "client_id": "409409966649-upkehmogfcdemm9kggk8o9kq28b7dlnc.apps.googleusercontent.com",
           "client_type": 1,

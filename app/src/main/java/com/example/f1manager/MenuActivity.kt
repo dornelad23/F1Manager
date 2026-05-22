@@ -25,7 +25,7 @@ class MenuActivity : BaseActivity() {
         val btnSair = findViewById<View>(R.id.btnSair)
 
         btnJogar.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
+            SessionManager.abrirDestinoCorreto(this)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
         }
 

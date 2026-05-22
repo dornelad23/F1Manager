@@ -13,9 +13,6 @@
         android:theme="@style/Theme.F1Manager"
         tools:targetApi="31">
         <activity
-            android:name=".FormulaCarView"
-            android:exported="false" />
-        <activity
             android:name=".GarageActivity"
             android:screenOrientation="landscape" />
         <activity

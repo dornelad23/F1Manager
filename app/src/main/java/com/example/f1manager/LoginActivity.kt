@@ -10,6 +10,7 @@ import com.google.android.gms.auth.api.signin.*
 import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.*
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : BaseActivity() {
@@ -170,6 +171,7 @@ class LoginActivity : BaseActivity() {
                         abrirCriarEquipe()
 
                     }
+
                     .addOnFailureListener {
 
                         mostrarErro(
@@ -177,6 +179,7 @@ class LoginActivity : BaseActivity() {
                             traduzirErro(it)
                         )
                     }
+
 
             } catch (e: Exception) {
 
@@ -190,19 +193,44 @@ class LoginActivity : BaseActivity() {
 
     private fun abrirCriarEquipe() {
 
-        startActivity(
-            Intent(
-                this,
-                CreateTeamActivity::class.java
-            )
-        )
+        val user = FirebaseAuth.getInstance().currentUser
 
-        overridePendingTransition(
-            R.anim.fade_in,
-            R.anim.fade_out
-        )
+        if (user == null) {
+            return
+        }
 
-        finish()
+        FirebaseFirestore.getInstance()
+            .collection("usuarios")
+            .document(user.uid)
+            .get()
+            .addOnSuccessListener { doc ->
+
+                if (doc.exists()) {
+
+                    startActivity(
+                        Intent(
+                            this,
+                            GarageActivity::class.java
+                        )
+                    )
+
+                } else {
+
+                    startActivity(
+                        Intent(
+                            this,
+                            CreateTeamActivity::class.java
+                        )
+                    )
+                }
+
+                overridePendingTransition(
+                    R.anim.fade_in,
+                    R.anim.fade_out
+                )
+
+                finish()
+            }
     }
 
     private fun mostrarErro(
