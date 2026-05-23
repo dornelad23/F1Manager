@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:orientation="vertical"
+    android:padding="7dp"
+    android:background="@drawable/bg_upgrade_card">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PNEUS"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:fontFamily="monospace" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/pneu_upgrade"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NÍVEL 1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="8sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="+10 ADERÊNCIA"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="7sp"
+        android:fontFamily="monospace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="R$ 3.500"
+            android:textColor="#39E246"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:textStyle="bold"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/btn_upgrade_green" />
+
+        <Button
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="6dp"
+            android:text="▲"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@null"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/btn_upgrade_arrow" />
+    </LinearLayout>
+
+</LinearLayout>
