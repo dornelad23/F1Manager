@@ -1,167 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- FUNDO -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/garage_bg"
-        android:scaleType="centerCrop"/>
+        android:scaleType="fitXY" />
 
-    <!-- ESCURECER -->
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#33000000"/>
+        android:background="#66000000" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="6dp">
 
-        <!-- HUD SUPERIOR -->
+        <!-- TOPO -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:padding="10dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
 
+            <!-- EQUIPE -->
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/bg_topbar"
+                android:layout_height="42dp"
+                android:layout_weight="1.35"
+                android:orientation="horizontal"
                 android:gravity="center_vertical"
-                android:padding="10dp">
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/bg_topbar">
 
-                <TextView
-                    android:id="@+id/txtNomeEquipe"
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/logo_f1_manager" />
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SAMUEL RACING"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
+                    android:layout_marginStart="7dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txtNomeEquipe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SAMUEL RACING"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Temporada 2026"
+                        android:textColor="#CFCFCF"
+                        android:textSize="8sp" />
+                </LinearLayout>
             </LinearLayout>
 
+            <Space android:layout_width="10dp" android:layout_height="1dp" />
+
+            <!-- DINHEIRO -->
             <LinearLayout
-                android:layout_width="160dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/bg_topbar"
-                android:gravity="center">
+                android:layout_width="0dp"
+                android:layout_height="42dp"
+                android:layout_weight="1.05"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/bg_topbar">
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DINHEIRO"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="8sp" />
 
                 <TextView
                     android:id="@+id/txtDinheiro"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="R$ 50.000"
-                    android:textColor="#4CFF4C"
+                    android:text="R$ 50000"
+                    android:textColor="#39FF57"
                     android:textStyle="bold"
-                    android:textSize="22sp"/>
+                    android:textSize="16sp" />
             </LinearLayout>
 
+            <Space android:layout_width="10dp" android:layout_height="1dp" />
+
+            <!-- TEMPORADA -->
+            <LinearLayout
+                android:layout_width="86dp"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_topbar">
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="2026"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Space android:layout_width="8dp" android:layout_height="1dp" />
+
+            <!-- RANK -->
+            <LinearLayout
+                android:layout_width="68dp"
+                android:layout_height="42dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:background="@drawable/bg_topbar">
+
+                <Space
+                    android:layout_width="12dp"
+                    android:layout_height="1dp" />
+
+                <ImageView
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_trophy" />
+
+                <TextView
+                    android:id="@+id/txtRank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="-"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Space android:layout_width="8dp" android:layout_height="1dp" />
+
+            <!-- CONFIG -->
+            <ImageButton
+                android:id="@+id/btnConfig"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_topbar"
+                android:padding="11dp"
+                android:src="@drawable/ic_settings"
+                android:tint="#FFFFFF" />
+        </LinearLayout>
+
+        <!-- VOLTAR -->
+        <LinearLayout
+            android:id="@+id/btnVoltar"
+            android:layout_width="105dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:background="@drawable/bg_topbar">
+
+            <ImageView
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/ic_back"
+                android:tint="#FFFFFF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:text="VOLTAR"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="12sp" />
         </LinearLayout>
 
         <!-- CARRO -->
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:padding="10dp">
+            android:layout_weight="1">
 
             <ImageView
                 android:id="@+id/imgCarro"
-                android:layout_width="620dp"
-                android:layout_height="260dp"
-                android:layout_gravity="center"
+                android:layout_width="750dp"
+                android:layout_height="300dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="-80dp"
                 android:src="@drawable/carro_pixel"
-                android:scaleType="fitCenter"/>
+                android:scaleType="fitCenter" />
         </FrameLayout>
 
         <!-- UPGRADES -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:layout_height="120dp"
+            android:orientation="horizontal">
 
-            <!-- MOTOR -->
-            <LinearLayout
+            <TextView
                 android:id="@+id/btnMotor"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical"
-                android:background="@drawable/card_upgrade"
-                android:padding="12dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:text="MOTOR\nNÍVEL 1\n+10 POTÊNCIA\nR$ 5.000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_upgrade_card" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MOTOR"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="NÍVEL 1"
-                    android:textColor="#BBBBBB"
-                    android:textSize="14sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="+10 POTÊNCIA"
-                    android:textColor="#4CFF4C"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R$ 5.000"
-                    android:textColor="#FFD54F"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <!-- AERO -->
-            <LinearLayout
+            <TextView
                 android:id="@+id/btnAero"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:orientation="vertical"
-                android:background="@drawable/card_upgrade"
-                android:padding="12dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:text="AERODINÂMICA\nNÍVEL 1\n+10 VELOCIDADE\nR$ 4.500"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_upgrade_card" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="AERODINÂMICA"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/btnPneu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="PNEUS\nNÍVEL 1\n+10 ADERÊNCIA\nR$ 3.500"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_upgrade_card" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R$ 4.500"
-                    android:textColor="#FFD54F"
-                    android:textSize="22sp"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/btnControle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="CONTROLE\nNÍVEL 1\n+10 CONTROLE\nR$ 4.000"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_upgrade_card" />
         </LinearLayout>
 
     </LinearLayout>
-
 </FrameLayout>

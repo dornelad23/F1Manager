@@ -28,13 +28,6 @@ class GarageActivity : BaseActivity() {
                     val velocidade = doc.getLong("velocidade") ?: 10
                     val controle = doc.getLong("controle") ?: 10
                     val pneu = doc.getLong("pneu") ?: 10
-                    val carroView = findViewById<FormulaCarView>(R.id.formulaCarView)
-
-                    carroView.atualizarCarro(
-                        motor.toInt(),
-                        velocidade.toInt(),
-                        pneu.toInt()
-                    )
 
                     txtNomeEquipe.text = nome
                     txtDinheiro.text = "R$ $dinheiro"
