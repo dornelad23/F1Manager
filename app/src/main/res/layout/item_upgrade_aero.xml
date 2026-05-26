@@ -16,86 +16,138 @@
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
-        android:textSize="13sp"
-        android:fontFamily="monospace" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:layout_marginTop="4dp"
-        android:src="@drawable/aero_upgrade"
-        android:scaleType="fitCenter" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NÍVEL 1"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="8sp"
+        android:textSize="15sp"
         android:fontFamily="monospace" />
 
     <LinearLayout
-        android:layout_width="72dp"
-        android:layout_height="14dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="4dp"
-        android:orientation="horizontal">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
 
-        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="#35C846"/>
-        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="2dp" android:background="#252525"/>
-        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="2dp" android:background="#252525"/>
-        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="2dp" android:background="#252525"/>
-        <View android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:layout_marginStart="2dp" android:background="#252525"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:src="@drawable/aero_upgrade"
+            android:scaleType="fitCenter" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.15"
+            android:orientation="vertical"
+            android:gravity="end|center_vertical">
+
+            <!-- NIVEL -->
+            <TextView
+                android:id="@+id/txtNivelAero"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="NÍVEL 1"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="9sp"
+                android:fontFamily="monospace" />
+
+            <!-- BARRA -->
+            <LinearLayout
+                android:layout_width="78dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/barAero1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#35C846"/>
+
+                <View
+                    android:id="@+id/barAero2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:background="#252525"/>
+
+                <View
+                    android:id="@+id/barAero3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:background="#252525"/>
+
+                <View
+                    android:id="@+id/barAero4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:background="#252525"/>
+
+                <View
+                    android:id="@+id/barAero5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="2dp"
+                    android:background="#252525"/>
+            </LinearLayout>
+
+            <!-- BONUS -->
+            <TextView
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="+10 VELOCIDADE"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="8sp"
+                android:fontFamily="monospace" />
+        </LinearLayout>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="+10 VELOCIDADE"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textStyle="bold"
-        android:textSize="7sp"
-        android:fontFamily="monospace" />
-
+    <!-- PREÇO -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginTop="6dp"
-        android:orientation="horizontal">
+        android:layout_height="34dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
-        <Button
+        <TextView
+            android:id="@+id/txtPrecoAero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:gravity="center"
             android:text="R$ 4.500"
             android:textColor="#39E246"
             android:textStyle="bold"
-            android:textSize="11sp"
-            android:backgroundTint="@null"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:padding="0dp"
+            android:textSize="13sp"
             android:fontFamily="monospace"
             android:background="@drawable/btn_upgrade_green" />
 
-        <Button
-            android:layout_width="36dp"
+        <TextView
+            android:id="@+id/btnUpgradeAero"
+            android:layout_width="38dp"
             android:layout_height="match_parent"
-            android:layout_marginStart="6dp"
-            android:text="▲"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="⬆"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:textSize="12sp"
-            android:backgroundTint="@null"
-            android:minHeight="0dp"
-            android:minWidth="0dp"
-            android:padding="0dp"
+            android:textSize="20sp"
             android:fontFamily="monospace"
-            android:background="@drawable/btn_upgrade_arrow" />
+            android:background="@drawable/btn_upgrade_arrow"
+            android:clickable="true"
+            android:focusable="true" />
     </LinearLayout>
 
 </LinearLayout>

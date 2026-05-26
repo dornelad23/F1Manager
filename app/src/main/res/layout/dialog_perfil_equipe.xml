@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp"
+    android:background="@drawable/bg_upgrade_card">
+
+    <TextView
+        android:id="@+id/txtPerfilNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EQUIPE"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/txtPerfilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="EMAIL"
+        android:textColor="#CFCFCF"
+        android:textSize="13sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/txtPerfilLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="LOGIN"
+        android:textColor="#CFCFCF"
+        android:textSize="13sp"
+        android:fontFamily="monospace" />
+
+    <TextView
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="ENCERRAR SESSÃO"
+        android:textColor="#FF5E5E"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/bg_red_button" />
+
+    <TextView
+        android:id="@+id/btnExcluirConta"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="EXCLUIR CONTA"
+        android:textColor="#FF5E5E"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/bg_red_button" />
+
+    <TextView
+        android:id="@+id/btnFecharPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="FECHAR"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/btn_upgrade_green" />
+
+</LinearLayout>

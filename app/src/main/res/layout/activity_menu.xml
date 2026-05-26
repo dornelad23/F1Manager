@@ -20,12 +20,11 @@
         android:paddingStart="28dp"
         android:paddingTop="18dp">
 
-        <!-- LOGO EM TEXTO -->
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_marginBottom="18dp">
+            android:layout_marginBottom="28dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -66,10 +65,6 @@
         <include
             android:id="@+id/btnJogar"
             layout="@layout/item_menu_jogar" />
-
-        <include
-            android:id="@+id/btnGaragem"
-            layout="@layout/item_menu_garagem" />
 
         <include
             android:id="@+id/btnOpcoes"

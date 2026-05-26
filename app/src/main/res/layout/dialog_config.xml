@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:background="@drawable/bg_upgrade_card">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CONFIGURAÇÕES"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:fontFamily="monospace" />
+
+    <Switch
+        android:id="@+id/switchMusica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Música"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:checked="true"
+        android:layout_marginTop="20dp" />
+
+    <Switch
+        android:id="@+id/switchEfeitos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Efeitos"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:checked="true" />
+
+    <Switch
+        android:id="@+id/switchFPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="FPS Alto"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:checked="true" />
+
+    <TextView
+        android:id="@+id/btnResetar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="RESETAR PROGRESSO"
+        android:textColor="#FF5E5E"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/btn_upgrade_arrow" />
+
+    <TextView
+        android:id="@+id/btnFecharConfig"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="FECHAR"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/btn_upgrade_green" />
+
+</LinearLayout>

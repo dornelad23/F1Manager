@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="620dp"
+    android:layout_height="360dp"
+    android:orientation="horizontal"
+    android:background="#EE090909">
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#151515"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:text="CONFIGURAÇÕES"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/abaBasica"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="BÁSICA"
+            android:textColor="#FFD84A"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:background="#3A2F05"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/abaTela"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="TELA"
+            android:textColor="#BBBBBB"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/abaConta"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:text="CONTA"
+            android:textColor="#BBBBBB"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtTituloAba"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BÁSICA"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/btnFecharOpcoes"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:text="X"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conteudoBasica"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Switch android:id="@+id/switchMusica" android:text="Música"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+
+            <Switch android:id="@+id/switchEfeitos" android:text="Efeitos sonoros"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+
+            <Switch android:id="@+id/switchVibracao" android:text="Vibração"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conteudoTela"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <Switch android:id="@+id/switchAnimacoes" android:text="Animações"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+
+            <Switch android:id="@+id/switchPerformance" android:text="Modo performance"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+
+            <Switch android:id="@+id/switchHUD" android:text="HUD minimalista"
+                android:textColor="#FFFFFF" android:fontFamily="monospace"
+                android:layout_width="match_parent" android:layout_height="45dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conteudoConta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btnSairConta"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="ENCERRAR SESSÃO"
+                android:textColor="#FF5E5E"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:background="@drawable/bg_red_button" />
+
+            <TextView
+                android:id="@+id/btnExcluirConta"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="EXCLUIR CONTA"
+                android:textColor="#FF5E5E"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:background="@drawable/bg_red_button" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

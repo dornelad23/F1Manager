@@ -45,11 +45,14 @@
                     android:src="@drawable/logo_f1_manager" />
 
                 <LinearLayout
+                    android:id="@+id/cardEquipe"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="7dp"
                     android:orientation="vertical">
+
+
 
                     <TextView
                         android:id="@+id/txtNomeEquipe"
@@ -131,6 +134,7 @@
             <Space android:layout_width="8dp" android:layout_height="1dp" />
 
             <LinearLayout
+                android:id="@+id/cardRank"
                 android:layout_width="0dp"
                 android:layout_height="46dp"
                 android:layout_weight="0.72"

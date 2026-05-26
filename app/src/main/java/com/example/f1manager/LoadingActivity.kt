@@ -39,12 +39,12 @@ class LoadingActivity : BaseActivity() {
 
                 } else {
 
-                    val intent = Intent(
-                        this@LoadingActivity,
-                        MenuActivity::class.java
+                    startActivity(
+                        Intent(
+                            this@LoadingActivity,
+                            MenuActivity::class.java
+                        )
                     )
-
-                    startActivity(intent)
 
                     overridePendingTransition(
                         R.anim.fade_in,
