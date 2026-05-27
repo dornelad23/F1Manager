@@ -1,8 +1,11 @@
 package com.example.f1manager
 
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.LinearLayout
 import android.widget.TextView
 import kotlin.random.Random
 
@@ -11,9 +14,7 @@ class RaceActivity : BaseActivity() {
     private lateinit var txtVolta: TextView
     private lateinit var txtPosicao: TextView
     private lateinit var txtTempo: TextView
-    private lateinit var txtRanking: TextView
     private lateinit var txtEvento: TextView
-    private lateinit var txtStatus: TextView
     private lateinit var txtPneus: TextView
     private lateinit var txtCombustivel: TextView
     private lateinit var btnIniciar: TextView
@@ -40,27 +41,13 @@ class RaceActivity : BaseActivity() {
         txtVolta = findViewById(R.id.txtVolta)
         txtPosicao = findViewById(R.id.txtPosicao)
         txtTempo = findViewById(R.id.txtTempo)
-        txtRanking = findViewById(R.id.txtRanking)
-        txtEvento = findViewById(R.id.txtEvento)
-        txtStatus = findViewById(R.id.txtStatus)
         txtPneus = findViewById(R.id.txtPneus)
         txtCombustivel = findViewById(R.id.txtCombustivel)
         btnIniciar = findViewById(R.id.btnIniciarCorrida)
+        txtClima = findViewById(R.id.txtClima)
+        txtRitmo = findViewById(R.id.txtRitmo)
+        listaRanking = findViewById(R.id.listaRanking)
 
-        findViewById<TextView>(R.id.btnConservador).setOnClickListener {
-            estrategia = "CONSERVADOR"
-            txtEvento.text = "Estratégia alterada: conservador."
-        }
-
-        findViewById<TextView>(R.id.btnNormal).setOnClickListener {
-            estrategia = "NORMAL"
-            txtEvento.text = "Estratégia alterada: normal."
-        }
-
-        findViewById<TextView>(R.id.btnAgressivo).setOnClickListener {
-            estrategia = "AGRESSIVO"
-            txtEvento.text = "Estratégia alterada: agressivo."
-        }
 
         atualizarTela()
 
@@ -68,21 +55,12 @@ class RaceActivity : BaseActivity() {
             iniciarCorrida()
         }
 
-        findViewById<TextView>(R.id.btnPneuMacio).setOnClickListener {
-            pneuEscolhido = "MACIO"
-            txtEvento.text = "Pneu escolhido: macio. Mais rápido, desgasta mais."
-        }
 
-        findViewById<TextView>(R.id.btnPneuMedio).setOnClickListener {
-            pneuEscolhido = "MÉDIO"
-            txtEvento.text = "Pneu escolhido: médio. Equilibrado."
-        }
-
-        findViewById<TextView>(R.id.btnPneuDuro).setOnClickListener {
-            pneuEscolhido = "DURO"
-            txtEvento.text = "Pneu escolhido: duro. Mais lento, dura mais."
-        }
     }
+
+    private lateinit var txtClima: TextView
+    private lateinit var txtRitmo: TextView
+    private lateinit var listaRanking: LinearLayout
 
     private fun iniciarCorrida() {
         btnIniciar.text = "SIMULANDO..."
@@ -161,17 +139,68 @@ class RaceActivity : BaseActivity() {
             else -> 0.0
         } + bonusPneu
 
-        val tempo = tempoBase + desgaste + modo + Random.nextDouble(-0.4, 0.8)
-        txtTempo.text = formatarTempo(tempo)
 
-        txtStatus.text =
-            "MODO: $estrategia\n\n" +
-                "PNEUS: $pneus%\n" +
-                "COMBUSTÍVEL: $combustivel%\n" +
-                "RITMO: ${if (estrategia == "AGRESSIVO") "ALTO" else if (estrategia == "CONSERVADOR") "BAIXO" else "NORMAL"}\n\n" +
-                "Dica da equipe:\n" +
-                if (pneus < 25) "Pneus estão acabando, cuidado nas próximas voltas."
-                else "Carro está respondendo bem. Continue nesse ritmo."
+    }
+
+    private fun atualizarRankingVisual() {
+
+        listaRanking.removeAllViews()
+
+        pilotos.forEachIndexed { index, piloto ->
+
+            val linha = LinearLayout(this)
+            linha.orientation = LinearLayout.HORIZONTAL
+            linha.setPadding(8, 8, 8, 8)
+
+            if (piloto == "VOCÊ") {
+                linha.setBackgroundColor(Color.parseColor("#1E8E3E"))
+            } else {
+                linha.setBackgroundColor(Color.parseColor("#101010"))
+            }
+
+            val posicao = TextView(this)
+            posicao.text = "${index + 1}"
+            posicao.setTextColor(Color.WHITE)
+            posicao.textSize = 14f
+            posicao.setTypeface(null, Typeface.BOLD)
+            posicao.width = 40
+
+            val nome = TextView(this)
+            nome.text = piloto
+            nome.setTextColor(Color.WHITE)
+            nome.textSize = 13f
+            nome.setTypeface(null, Typeface.BOLD)
+            nome.layoutParams =
+                LinearLayout.LayoutParams(0,
+                    LinearLayout.LayoutParams.WRAP_CONTENT, 1f)
+
+            val pneu = TextView(this)
+
+            pneu.text = when (pneuEscolhido) {
+                "MACIO" -> "S"
+                "MÉDIO" -> "M"
+                "DURO" -> "H"
+                else -> "M"
+            }
+
+            pneu.setTextColor(
+                when (pneuEscolhido) {
+                    "MACIO" -> Color.RED
+                    "MÉDIO" -> Color.YELLOW
+                    "DURO" -> Color.WHITE
+                    else -> Color.YELLOW
+                }
+            )
+
+            pneu.textSize = 13f
+            pneu.setTypeface(null, Typeface.BOLD)
+
+            linha.addView(posicao)
+            linha.addView(nome)
+            linha.addView(pneu)
+
+            listaRanking.addView(linha)
+        }
     }
 
     private fun trocarPosicao(novaPosicao: Int) {
@@ -193,17 +222,8 @@ class RaceActivity : BaseActivity() {
         txtPneus.text = "PNEUS $pneus%"
         txtCombustivel.text = "COMB. $combustivel%"
 
-        val rank = StringBuilder()
+        atualizarRankingVisual()
 
-        pilotos.forEachIndexed { index, nome ->
-            val lugar = index + 1
-            val marcador = if (nome == "VOCÊ") "▶" else "|"
-            val tempo = if (lugar == 1) "-" else "+${"%.3f".format(lugar * 1.142)}"
-
-            rank.append("%2d $marcador %-5s %7s\n".format(lugar, nome, tempo))
-        }
-
-        txtRanking.text = rank.toString()
     }
 
     private fun finalizarCorrida() {
@@ -212,11 +232,5 @@ class RaceActivity : BaseActivity() {
         btnIniciar.text = "FINALIZADO"
         txtEvento.text = "Corrida finalizada! Você terminou em P$pos."
 
-        txtStatus.text = txtStatus.text.toString() + "\n\nRESULTADO FINAL: P$pos"    }
-
-    private fun formatarTempo(segundos: Double): String {
-        val min = (segundos / 60).toInt()
-        val sec = segundos % 60
-        return "%d:%06.3f".format(min, sec)
     }
 }
