@@ -16,6 +16,9 @@
             android:name=".GarageActivity"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".RaceActivity"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".CreateTeamActivity"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="adjustPan" />

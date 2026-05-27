@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07090D">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_track"
+        android:scaleType="centerCrop"
+        android:alpha="0.45" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#AA000000" />
+
+    <!-- TOPO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/txtVolta"
+            android:layout_width="130dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="VOLTA 1/20"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+
+        <TextView
+            android:id="@+id/txtPosicao"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="P 10"
+            android:textColor="#39E246"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+
+        <TextView
+            android:id="@+id/txtTempo"
+            android:layout_width="160dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:gravity="center"
+            android:text="1:28.000"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/btnIniciarCorrida"
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="INICIAR"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/btn_upgrade_green" />
+    </LinearLayout>
+
+    <!-- RANKING -->
+    <LinearLayout
+        android:id="@+id/painelRanking"
+        android:layout_width="245dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/bg_upgrade_card">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:gravity="center"
+            android:text="🏁 CLASSIFICAÇÃO"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:fontFamily="monospace" />
+
+        <TextView
+            android:id="@+id/txtRanking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#FFFFFF"
+            android:textSize="10sp"
+            android:fontFamily="monospace" />
+    </LinearLayout>
+
+    <!-- PAINEL CENTRAL -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="250dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtEvento"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="Equipe pronta para a corrida."
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="12dp"
+            android:padding="14dp"
+            android:textColor="#DADADA"
+            android:textSize="13sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_upgrade_card" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnPneuMacio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="MACIO"
+                    android:textColor="#FF4444"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_topbar"/>
+
+                <TextView
+                    android:id="@+id/btnPneuMedio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="MÉDIO"
+                    android:textColor="#FFD84A"
+                    android:textStyle="bold"
+                    android:background="@drawable/btn_upgrade_green"/>
+
+                <TextView
+                    android:id="@+id/btnPneuDuro"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="DURO"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:background="@drawable/bg_topbar"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnConservador"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="CONSERVADOR"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_topbar" />
+
+            <TextView
+                android:id="@+id/btnNormal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="NORMAL"
+                android:textColor="#39E246"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/btn_upgrade_green" />
+
+            <TextView
+                android:id="@+id/btnAgressivo"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:text="AGRESSIVO"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="11sp"
+                android:background="@drawable/bg_topbar" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- MINI MAPA / STATUS -->
+    <LinearLayout
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="76dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="145dp"
+            android:src="@drawable/ic_track"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/txtPneus"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="PNEUS 100%"
+            android:textColor="#39E246"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+
+        <TextView
+            android:id="@+id/txtCombustivel"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="COMB. 100%"
+            android:textColor="#FFD84A"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:background="@drawable/bg_topbar" />
+    </LinearLayout>
+
+</FrameLayout>

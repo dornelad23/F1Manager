@@ -72,6 +72,32 @@ class GarageActivity : BaseActivity() {
         btnVoltar.setOnClickListener {
             finish()
         }
+        val btnCorrida = findViewById<LinearLayout>(R.id.cardCorrida)
+
+        btnCorrida.setOnClickListener {
+            startActivity(
+                android.content.Intent(
+                    this,
+                    RaceActivity::class.java
+                )
+            )
+        }
+        val cardCorrida = findViewById<LinearLayout>(R.id.cardCorrida)
+
+        cardCorrida.setOnClickListener {
+
+            startActivity(
+                android.content.Intent(
+                    this,
+                    RaceActivity::class.java
+                )
+            )
+
+            overridePendingTransition(
+                R.anim.fade_in,
+                R.anim.fade_out
+            )
+        }
 
         txtNivelMotor = findViewById(R.id.txtNivelMotor)
         txtNivelAero = findViewById(R.id.txtNivelAero)
